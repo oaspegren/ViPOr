@@ -7,3 +7,5 @@ ViPOr is a teaching tool to help understand the orbits of particles in different
 galpy, numpy, matplotlib, numexpr, astropy, streamlit
 
 # LINK TO STREAMLIT PAGE
+
+![XKCD comic about orbital mechanics](https://imgs.xkcd.com/comics/orbital_mechanics.png)
