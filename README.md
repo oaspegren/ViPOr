@@ -1,4 +1,9 @@
-# ViPOr: Visualizing and Plotting Orbits (with Python)
+# ViPOr: Visualizing and Plotting Potentials and Orbits (with Python)
 
-# explanation of code
-# link to streamlit page
+ViPOr is a teaching tool to help understand the orbits of particles in different potentials. The package is a web application launched using streamlit. 
+
+# DEPENDENCIES
+
+galpy, numpy, matplotlib, numexpr, astropy, streamlit
+
+# LINK TO STREAMLIT PAGE
