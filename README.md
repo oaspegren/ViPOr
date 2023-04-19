@@ -2,6 +2,8 @@
 
 ViPOr is a teaching tool to help understand the orbits of particles in different potentials. The package is a web application launched using streamlit. 
 
+ViPOr makes extensive use of galpy, a Python package that includes features for initializing potentials, integrating orbits and displaying the paths of particles through multidimensional plots and animations. 
+
 # DEPENDENCIES
 
 galpy, numpy, matplotlib, numexpr, astropy, streamlit
