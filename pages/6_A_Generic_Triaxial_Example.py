@@ -35,7 +35,7 @@ param = st.slider("Power-law Exponent, " + r"$\alpha$", min_value = 0.5, max_val
 
 pot_fxn_set = PowerTriaxialPotential(alpha = param)
 
-st.image(plotPotentials(pot_fxn_set))
+st.pyplot(plt.imshow(plotPotentials(pot_fxn_set)))
 
 fig0, fig1, fig2, fig3, raw_html = plot_orbit_2D(pot_fxn_set, years, radius, height)
 
