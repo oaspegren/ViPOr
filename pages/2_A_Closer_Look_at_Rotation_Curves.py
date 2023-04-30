@@ -1,5 +1,6 @@
-!pip install astropy
-!pip install galpy
+# This page allows the user to select different potentials, add spiral arms or dark matter and then plot the rotation curves. This allows 
+# the user to visualize how particle's velocities change within a given potential, and compare those results across different mass 
+# distributions. 
 
 import numexpr
 import matplotlib.pyplot as plt

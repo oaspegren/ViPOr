@@ -1,4 +1,9 @@
-# File to create and plot different potentials
+# This file contrains functions for plotting figures that describe the orbit of a particle in three dimensions. This function is called in the
+# spherically symmetric, axisymmetric and triaxial mass distribution pages. 
+
+# inputs: pot_fxn - the potential function, either set by default or chosen by the user
+# years - integration time of the orbit, either set by default or chosen by the user with a slider
+# R - the initial radius from the galactic center, picked by the user 
 
 from galpy.orbit import Orbit
 from astropy import units

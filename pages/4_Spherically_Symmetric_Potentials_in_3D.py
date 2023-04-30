@@ -1,3 +1,7 @@
+# This page allows the user to select a spherically symmetric potential, modify its key parameters (power law exponent, scale length, etc.),
+# and then examine different plots that describe its motion in three-dimensions. At the end, there's an animation that shows the motion
+# of the particle in its orbit.
+
 from astropy import units
 from galpy.orbit import Orbit
 from galpy.potential import plotPotentials, TwoPowerSphericalPotential, PowerSphericalPotential, HomogeneousSpherePotential, SphericalShellPotential, PlummerPotential
