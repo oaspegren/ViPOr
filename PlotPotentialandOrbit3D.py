@@ -16,7 +16,7 @@ import numpy
 
 import streamlit as st
 
-def plot_orbit_3D(pot_fxn, years, R):
+def plot_orbit_3D(pot_fxn, years, R, z):
 	'''
 	Plot the orbit of your selected potential, integrating over a variable number of times and allowing
 	the user to change the number of spiral arms present, and the effects of dynamical friction.
@@ -28,7 +28,7 @@ def plot_orbit_3D(pot_fxn, years, R):
 
 	# define all the initial conditions
 	R = R*units.kpc
-	z = 0.0*units.kpc
+	z = z*units.kpc
 	
 	vR = 0.0*units.km/units.s
 	vT = 0.0*units.km/units.s
