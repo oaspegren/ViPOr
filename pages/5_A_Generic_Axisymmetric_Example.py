@@ -29,6 +29,7 @@ st.markdown(
 
 years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
 radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
+height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
 
 scalelength = st.slider("Scale Length, " + r"$h_r$", min_value = 1, max_value = 100)
 scaleheight = st.slider("Scale Height, " + r"$h_z$", min_value = 1, max_value = 20)
@@ -37,7 +38,7 @@ pot_fxn_set = DoubleExponentialDiskPotential(hr = scalelength*units.kpc, hz = sc
 
 #plotPotentials(pot_fxn_set)
 
-fig0, fig1, fig2, fig3, raw_html = plot_orbit_2D(pot_fxn_set, years, radius)
+fig0, fig1, fig2, fig3, raw_html = plot_orbit_2D(pot_fxn_set, years, radius, height)
 
 st.markdown("We can examine three plots to understand how particles will move in this potential.")
 st.markdown("The first is an **R vs. z** plot, which displays the path of the orbit in the meridional plane. With this one, we can see how far the particle is from the \
@@ -66,7 +67,7 @@ st.components.v1.html(raw_html, height = 800)
 
 st.markdown("We can also explore this orbit in 3 dimensions... ")
 
-fig0, fig1, fig2, raw_html = plot_orbit_3D(pot_fxn_set, years, radius)
+fig0, fig1, fig2, raw_html = plot_orbit_3D(pot_fxn_set, years, radius, height)
 
 st.markdown("This first plot shows the orbit in **x, y and z coordinates**. With this we can see how the particle will move \
 	in three-dimensional space.")

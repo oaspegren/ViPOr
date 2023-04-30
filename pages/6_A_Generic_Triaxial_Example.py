@@ -2,10 +2,11 @@ from galpy.util.conversion import get_physical
 import numexpr
 import matplotlib.pyplot as plt
 from astropy import units
-from galpy.util import conversion
+from galpy.util import conversion, plot
 from galpy.potential import PowerTriaxialPotential, plotPotentials
 import numpy
 import streamlit as st
+
 
 from PlotPotentialandOrbit3D import plot_orbit_3D
 from PlotPotentialandOrbit2D import plot_orbit_2D
@@ -28,15 +29,15 @@ st.markdown(
 
 years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
 radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
+height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
 
 param = st.slider("Power-law Exponent, " + r"$\alpha$", min_value = 0.5, max_value = 5.0, step = 0.25)
 
 pot_fxn_set = PowerTriaxialPotential(alpha = param)
 
-#plotPotentials(pot_fxn_set)
+st.pyplot(plotPotentials(pot_fxn_set))
 
-
-fig0, fig1, fig2, fig3, raw_html = plot_orbit_2D(pot_fxn_set, years, radius)
+fig0, fig1, fig2, fig3, raw_html = plot_orbit_2D(pot_fxn_set, years, radius, height)
 
 st.markdown("We can examine three plots to understand how particles will move in this potential.")
 st.markdown("The first is an **R vs. z** plot, which displays the path of the orbit in the meridional plane. With this one, we can see how far the particle is from the \
