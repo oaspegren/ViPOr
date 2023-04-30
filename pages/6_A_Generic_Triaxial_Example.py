@@ -66,7 +66,7 @@ st.components.v1.html(raw_html, height = 800)
 
 st.markdown("We can also explore this orbit in 3 dimensions... ")
 
-fig0, fig1, fig2, raw_html = plot_orbit_3D(pot_fxn_set, years, radius)
+fig0, fig1, fig2, raw_html = plot_orbit_3D(pot_fxn_set, years, radius, height)
 
 st.markdown("This first plot shows the orbit in **x, y and z coordinates**. With this we can see how the particle will move \
 	in three-dimensional space.")
