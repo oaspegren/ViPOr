@@ -1,3 +1,6 @@
+!pip install astropy
+!pip install galpy
+
 import numexpr
 import matplotlib.pyplot as plt
 from astropy import units
