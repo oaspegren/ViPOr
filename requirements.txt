@@ -1,3 +1,4 @@
 galpy
 astropy
 numexpr
+ipython/jupyter
