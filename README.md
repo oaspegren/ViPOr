@@ -15,7 +15,9 @@ The application is composed of several pages:
 
 # DEPENDENCIES
 
-galpy, numpy, matplotlib, numexpr, astropy, streamlit
+This application relies on **galpy**, a package that assists in calculating potentials, plotting orbits, and performing other actions related to galaxy dynamics. Galpy uses numpy, matplotlib, numexpr (used for characterizing and plotting orbits), and astropy (in this application, for manipulating and converting units). 
+
+If the user would like to run the application directly from this Github repository with the link below, they will not need to perform any installations — the required dependencies are listed and installed with the *requirements.txt* file above. 
 
 # LINK TO STREAMLIT PAGE
 
