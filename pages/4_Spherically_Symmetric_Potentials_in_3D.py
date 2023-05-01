@@ -90,7 +90,11 @@ height = st.slider("Set the initial height from the galactic plane:", min_value 
 
 # 	pot_fxn_set = PlummerPotential(b = param)
 
-fig0, fig1, fig2, raw_html = plot_orbit_3D(pot_fxn_set, years, radius, height)
+fig0, fig1, fig2, raw_html, density = plot_orbit_3D(pot_fxn_set, years, radius, height)
+
+st.markdown("This is what a density plot of the potential looks like.")
+
+st.pyplot(f'{density}')
 
 st.markdown("This first plot shows the orbit in **x, y and z coordinates**. With this we can see how the particle will move \
 	in three-dimensional space.")

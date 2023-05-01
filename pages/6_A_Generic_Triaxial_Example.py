@@ -37,7 +37,11 @@ pot_fxn_set = PowerTriaxialPotential(alpha = param)
 
 #st.pyplot(plt.imshow(plotPotentials(pot_fxn_set)))
 
-fig0, fig1, fig2, fig3, raw_html = plot_orbit_2D(pot_fxn_set, years, radius, height)
+fig0, fig1, fig2, fig3, raw_html, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
+
+st.markdown("This is what a density plot of the potential looks like.")
+
+st.pyplot(f'{density}')
 
 st.markdown("We can examine three plots to understand how particles will move in this potential.")
 st.markdown("The first is an **R vs. z** plot, which displays the path of the orbit in the meridional plane. With this one, we can see how far the particle is from the \

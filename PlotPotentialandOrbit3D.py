@@ -77,11 +77,10 @@ def plot_orbit_3D(pot_fxn, years, R, z):
 	# st.pyplot(fig1, bbox_inches = "tight", pad_inches = 0.5)
 	# st.pyplot(fig2, bbox_inches = "tight", pad_inches = 0.5)
 
-	st.markdown("And the 3D animation of the orbit:")
 	raw_html = orbit.animate3d()._repr_html_()
-	#st.components.v1.html(raw_html, height = 800)
+	density = galpy.potential.plotPotentials(pot_fxn)
+	# st.components.v1.html(raw_html, height = 800)
 
-
-	return fig0, fig1, fig2, raw_html
+	return fig0, fig1, fig2, fig3, raw_html, density
 
 	

@@ -2,7 +2,6 @@
 
 from galpy.orbit import Orbit
 from astropy import units
-import galpy
 import galpy.potential
 from galpy.util.conversion import get_physical
 import numexpr
@@ -74,9 +73,11 @@ def plot_orbit_2D(_pot_fxn, _years, _R, _z):
 	# st.pyplot(fig3, bbox_inches = "tight", pad_inches = 0.5)
 
 	raw_html = orbit.animate()._repr_html_()
+
+	density = galpy.potential.plotPotentials(_pot_fxn)
 	# st.components.v1.html(raw_html, height = 800)
 
-	return fig0, fig1, fig2, fig3, raw_html
+	return fig0, fig1, fig2, fig3, raw_html, density
 
 
 
