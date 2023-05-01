@@ -81,6 +81,6 @@ def plot_orbit_3D(pot_fxn, years, R, z):
 	density = galpy.potential.plotPotentials(pot_fxn)
 	# st.components.v1.html(raw_html, height = 800)
 
-	return fig0, fig1, fig2, fig3, raw_html, density
+	return fig0, fig1, fig2, raw_html, density
 
 	
