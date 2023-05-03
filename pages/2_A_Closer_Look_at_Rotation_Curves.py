@@ -91,7 +91,7 @@ orbit_dedp = Orbit(init_cond, **get_physical(dedp))
 orbit_tptp = Orbit(init_cond, **get_physical(tptp))
 orbit_lp = Orbit(init_cond, **get_physical(lp))
 
-times = numpy.linspace(0.,_years,3001)*units.Gyr
+times = numpy.linspace(0.,14.0,3001)*units.Gyr
    
 orbit_hsp.integrate(times, hsp)
 orbit_psp.integrate(times, psp)
