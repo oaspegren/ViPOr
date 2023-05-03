@@ -81,7 +81,7 @@ vT = 0.0*units.km/units.s
 vz = 0.0*units.km/units.s
 phi = 0.0*units.radian
 
-init_cond = [R, z, vR, vT, vz, phi]
+init_cond = [R, vR, vT, z, vz, phi]
 
 orbit_hsp = Orbit(init_cond, **get_physical(hsp))
 orbit_psp = Orbit(init_cond, **get_physical(psp))
