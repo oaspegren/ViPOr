@@ -74,12 +74,14 @@ if dm_cb == True:
 	st.markdown("We approximate the component of dark matter with the **NFW Potential**:")
 	st.latex(r'''\rho(r)= \frac{\text{amp}}{4\pi a^3} \frac{1}{(r/a)(1 + r/a)^{2}} ''')
 
+R = 10*units.kpc
+z = 5*units.kpc
 vR = 0.0*units.km/units.s
 vT = 0.0*units.km/units.s
 vz = 0.0*units.km/units.s
 phi = 0.0*units.radian
 
-init_cond = [10*units.kpc, 5*units.kpc, vR, vT, vz, phi]
+init_cond = [R, z, vR, vT, vz, phi]
 
 orbit_hsp = Orbit(init_cond, **get_physical(hsp))
 orbit_psp = Orbit(init_cond, **get_physical(psp))
