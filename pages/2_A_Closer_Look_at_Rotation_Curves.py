@@ -5,7 +5,7 @@
 import numexpr
 import matplotlib.pyplot as plt
 from astropy import units
-from galpy.orbit import Orbit, plot, integrate
+from galpy.orbit import Orbit
 from galpy import potential
 import numpy
 import streamlit as st
