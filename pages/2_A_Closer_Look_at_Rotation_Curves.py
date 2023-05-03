@@ -43,7 +43,7 @@ ssp = potential.SphericalShellPotential()
 dedp = potential.DoubleExponentialDiskPotential()
 tptp = potential.TwoPowerTriaxialPotential()
 lp = potential.NFWPotential(amp = (6*10**11)*units.solMass)
-   
+
 # Create a checkbox for the user to add spiral arms, and a slider for the number of spiral arms to add
 # then alter the potentials by adding the arms component
 
@@ -72,7 +72,28 @@ if dm_cb == True:
 	st.markdown("We approximate the component of dark matter with the **NFW Potential**:")
 	st.latex(r'''\rho(r)= \frac{\text{amp}}{4\pi a^3} \frac{1}{(r/a)(1 + r/a)^{2}} ''')
 
+
+orbit_hsp = Orbit(init_cond, **get_physical(hsp))
+orbit_psp = Orbit(init_cond, **get_physical(psp))
+orbit_pspc = Orbit(init_cond, **get_physical(pspc))
+orbit_ssp = Orbit(init_cond, **get_physical(ssp))
+orbit_dedp = Orbit(init_cond, **get_physical(dedp))
+orbit_tptp = Orbit(init_cond, **get_physical(tptp))
+orbit_lp = Orbit(init_cond, **get_physical(lp))
+
+times = numpy.linspace(0.,_years,3001)*units.Gyr
+   
+orbit_hsp.integrate(times, hsp)
+orbit_psp.integrate(times, psp)
+orbit_pspc.integrate(times, pspc)
+orbit_ssp.integrate(times, ssp)
+orbit_dedp.integrate(times, dedp)
+orbit_tptp.integrate(times, tptp)
+orbit_lp.integrate(times, lp)
+
 fig, ax = plt.subplots(figsize = (10, 6))
+
+fig_orbit, ax_orbit = plt.subplots()
 
 st.markdown("Check a box to display the rotation curve for a given potential:")
 
@@ -80,30 +101,44 @@ st.markdown("Check a box to display the rotation curve for a given potential:")
 
 if st.checkbox("Homogeneous Sphere Potential"):
 	rc_hsp = potential.calcRotcurve(hsp, r_s, phi = 0)
+	orb_hsp = orbit_hsp.plot(lw=0.6)[0].get_data()
+	ax_orbit.plot(orb_hsp[0], orb_hsp[1], label = "Homogeneous Sphere Potential")
 	ax.plot(r_s, rc_hsp, label = "Homogeneous Sphere Potential")
 
 if st.checkbox("Power Spherical Potential"):
 	rc_psp = potential.calcRotcurve(psp, r_s, phi = 0)
+	orb_psp = orbit_psp.plot(lw=0.6)[0].get_data()
+	ax_orbit.plot(orb_psp[0], orb_psp[1], label = "Power Spherical")
 	ax.plot(r_s, rc_psp, label = "Power Spherical")
 
 if st.checkbox("Power Spherical Potential, with Cutoff"):
 	rc_pspc = potential.calcRotcurve(pspc, r_s, phi = 0)
+	orb_pspc = orbit_pspc.plot(lw=0.6)[0].get_data()
+	ax_orbit.plot(orb_pspc[0], orb_pspc[1], label = "Power Spherical, with Cutoff")
 	ax.plot(r_s, rc_pspc, label = "Power Spherical, with Cutoff")
 
 if st.checkbox("Spherical Shell Potential"):
 	rc_ssp = potential.calcRotcurve(ssp, r_s, phi = 0)
+	orb_ssp = orbit_ssp.plot(lw=0.6)[0].get_data()
+	ax_orbit.plot(orb_ssp[0], orb_ssp[1], label = "Spherical Shell")
 	ax.plot(r_s, rc_ssp, label = "Spherical Shell")
 
 if st.checkbox("Double Exponential Disk Potential"):
 	rc_dedp = potential.calcRotcurve(dedp, r_s, phi = 0)
+	orb_dedp = orbit_dedp.plot(lw=0.6)[0].get_data()
+	ax_orbit.plot(orb_dedp[0], orb_dedp[1], label = "Double Exponential Disk")
 	ax.plot(r_s, rc_dedp, label = "Double Exponential Disk")
 
 if st.checkbox("Two Power Triaxial Potential"):
 	rc_tptp = potential.calcRotcurve(tptp, r_s, phi = 0)
+	orb_tptp = orbit_tptp.plot(lw=0.6)[0].get_data()
+	ax_orbit.plot(orb_tptp[0], orb_tptp[1], label = "Two Power Triaxial")
 	ax.plot(r_s, rc_tptp, label = "Two Power Triaxial")
 
 if st.checkbox("Dark Matter Halo") and dm_cb == True:
 	rc_lp = potential.calcRotcurve(lp, r_s, phi = 0)
+	orb_lp = orbit_lp.plot(lw=0.6)[0].get_data()
+	ax_orbit.plot(orb_lp[0], orb_lp[1], label = "Dark Matter Halo")
 	ax.plot(r_s, rc_lp, label = "Dark Matter Halo")
 
 # set labels and the legend for the plot
@@ -115,4 +150,21 @@ ax.set_ylabel(r"$v_c(R)/v_c(R_0)$")
 
 ax.legend()
 
+ax_orbit.set_xlabel(r"$R$ (kpc)")
+ax_orbit.set_ylabel(r"$z$ (kpc)")
+ax_orbit.set_title("Orbit, in R vs. z")
+
+ax_orbit.legend()
+
 st.pyplot(fig)
+
+fig, ax = plt.subplots()
+
+raw_html = orbit.animate()._repr_html_()
+st.components.v1.html(raw_html, height = 800)
+
+fig0, ax0 = plt.subplots()
+ax0.plot(reg[0], reg[1])
+ax0.set_xlabel(r"$R$ (kpc)")
+ax0.set_ylabel(r"$z$ (kpc)")
+ax0.set_title("Orbit, in R vs. z")

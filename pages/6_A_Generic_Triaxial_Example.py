@@ -8,8 +8,7 @@ import numpy
 import streamlit as st
 
 
-from PlotPotentialandOrbit3D import plot_orbit_3D
-from PlotPotentialandOrbit2D import plot_orbit_2D
+from PlotPotentialandOrbit2D import plot_orbit_2D, plot_orbit_3D
 
 st.markdown("## Looking at Orbits in a Power-law Triaxial Potential")
 st.markdown("We now look at an example of an triaxial potential. These are orbits created \

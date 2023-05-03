@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from astropy import units
 from galpy.util import conversion
 from galpy import orbit 
-from galpy.potential import calcRotcurve, PowerSphericalPotentialwCutoff, MiyamotoNagaiPotential, NFWPotential, KeplerPotential
+from galpy.potential import plotPotentials, calcRotcurve, PowerSphericalPotentialwCutoff, MiyamotoNagaiPotential, NFWPotential, KeplerPotential
 import numpy
 import streamlit as st
 
@@ -87,6 +87,11 @@ else:
 
 	orbits = orbit.Orbit(**get_physical(galaxy))
 	orbits.integrate(times, galaxy)
+
+	st.markdown("Below is a density plot of the potential for the Milky Way with the components selected.")
+
+	density = plotPotentials(galaxy)
+	st.pyplot(density.get_figure())
 
 	st.markdown("See how the movement of the particle changes depending on the components we include. In two dimensions...")
 	raw_html = orbits.animate()._repr_html_()

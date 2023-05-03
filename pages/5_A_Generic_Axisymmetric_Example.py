@@ -7,8 +7,8 @@ from galpy.potential import DoubleExponentialDiskPotential, plotPotentials
 import numpy
 import streamlit as st
 
-from PlotPotentialandOrbit3D import plot_orbit_3D
-from PlotPotentialandOrbit2D import plot_orbit_2D
+from PlotPotentialandOrbit2D import plot_orbit_2D, plot_orbit_3D
+
 
 st.markdown("## Looking at Orbits in a Double Exponential Disk Potential")
 st.markdown("We now look at a general example of an axisymmetric potential. These are orbits created \
