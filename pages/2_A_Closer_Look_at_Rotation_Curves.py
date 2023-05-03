@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from astropy import units
 from galpy.orbit import Orbit
 from galpy import potential
+from galpy.util.conversion import get_physical
 import numpy
 import streamlit as st
 
@@ -74,6 +75,7 @@ if dm_cb == True:
 	st.latex(r'''\rho(r)= \frac{\text{amp}}{4\pi a^3} \frac{1}{(r/a)(1 + r/a)^{2}} ''')
 
 init_cond = [10*units.kpc, 5*units.kpc, 0, 0, 0, 0]
+
 orbit_hsp = Orbit(init_cond, **get_physical(hsp))
 orbit_psp = Orbit(init_cond, **get_physical(psp))
 orbit_pspc = Orbit(init_cond, **get_physical(pspc))
