@@ -94,7 +94,7 @@ fig0, fig1, fig2, raw_html, density = plot_orbit_3D(pot_fxn_set, years, radius, 
 
 st.markdown("This is what a density plot of the potential looks like.")
 
-st.pyplot(density)
+st.pyplot(density.get_figure())
 
 st.markdown("This first plot shows the orbit in **x, y and z coordinates**. With this we can see how the particle will move \
 	in three-dimensional space.")
