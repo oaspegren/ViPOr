@@ -83,23 +83,7 @@ phi = 0.0*units.radian
 
 init_cond = [R, vR, vT, z, vz, phi]
 
-# orbit_hsp = Orbit(init_cond, **get_physical(hsp))
-# orbit_psp = Orbit(init_cond, **get_physical(psp))
-# orbit_pspc = Orbit(init_cond, **get_physical(pspc))
-# orbit_ssp = Orbit(init_cond, **get_physical(ssp))
-# orbit_dedp = Orbit(init_cond, **get_physical(dedp))
-# orbit_tptp = Orbit(init_cond, **get_physical(tptp))
-# orbit_lp = Orbit(init_cond, **get_physical(lp))
-
 times = numpy.linspace(0.,14.0,3001)*units.Gyr
-   
-# orbit_hsp.integrate(times, hsp)
-# orbit_psp.integrate(times, psp)
-# orbit_pspc.integrate(times, pspc)
-# orbit_ssp.integrate(times, ssp)
-# orbit_dedp.integrate(times, dedp)
-# orbit_tptp.integrate(times, tptp)
-# orbit_lp.integrate(times, lp)
 
 fig, ax = plt.subplots(figsize = (10, 6))
 
@@ -111,58 +95,58 @@ st.markdown("Check a box to display the rotation curve for a given potential:")
 
 if st.checkbox("Homogeneous Sphere Potential"):
 	rc_hsp = potential.calcRotcurve(hsp, r_s, phi = 0)
-	orbit_hsp = Orbit(init_cond, **get_physical(hsp))
-	orbit_hsp.integrate(times, hsp)
-	orb_hsp = orbit_hsp.plot(lw=0.6)[0].get_data()
-	ax_orbit.plot(orb_hsp[0], orb_hsp[1], label = "Homogeneous Sphere Potential")
+	# orbit_hsp = Orbit(init_cond, **get_physical(hsp))
+	# orbit_hsp.integrate(times, hsp)
+	# orb_hsp = orbit_hsp.plot(lw=0.6)[0].get_data()
+	# ax_orbit.plot(orb_hsp[0], orb_hsp[1], label = "Homogeneous Sphere Potential")
 	ax.plot(r_s, rc_hsp, label = "Homogeneous Sphere Potential")
 
 if st.checkbox("Power Spherical Potential"):
 	rc_psp = potential.calcRotcurve(psp, r_s, phi = 0)
-	orbit_psp = Orbit(init_cond, **get_physical(psp))
-	orbit_psp.integrate(times, psp)
-	orb_psp = orbit_psp.plot(lw=0.6)[0].get_data()
-	ax_orbit.plot(orb_psp[0], orb_psp[1], label = "Power Spherical")
+	# orbit_psp = Orbit(init_cond, **get_physical(psp))
+	# orbit_psp.integrate(times, psp)
+	# orb_psp = orbit_psp.plot(lw=0.6)[0].get_data()
+	# ax_orbit.plot(orb_psp[0], orb_psp[1], label = "Power Spherical")
 	ax.plot(r_s, rc_psp, label = "Power Spherical")
 
 if st.checkbox("Power Spherical Potential, with Cutoff"):
 	rc_pspc = potential.calcRotcurve(pspc, r_s, phi = 0)
-	orbit_pspc = Orbit(init_cond, **get_physical(pspc))
-	orbit_pspc.integrate(times, pspc)
-	orb_pspc = orbit_pspc.plot(lw=0.6)[0].get_data()
-	ax_orbit.plot(orb_pspc[0], orb_pspc[1], label = "Power Spherical, with Cutoff")
+	# orbit_pspc = Orbit(init_cond, **get_physical(pspc))
+	# orbit_pspc.integrate(times, pspc)
+	# orb_pspc = orbit_pspc.plot(lw=0.6)[0].get_data()
+	# ax_orbit.plot(orb_pspc[0], orb_pspc[1], label = "Power Spherical, with Cutoff")
 	ax.plot(r_s, rc_pspc, label = "Power Spherical, with Cutoff")
 
 if st.checkbox("Spherical Shell Potential"):
 	rc_ssp = potential.calcRotcurve(ssp, r_s, phi = 0)
-	orbit_ssp = Orbit(init_cond, **get_physical(ssp))
-	orbit_ssp.integrate(times, ssp)
-	orb_ssp = orbit_ssp.plot(lw=0.6)[0].get_data()
-	ax_orbit.plot(orb_ssp[0], orb_ssp[1], label = "Spherical Shell")
+	# orbit_ssp = Orbit(init_cond, **get_physical(ssp))
+	# orbit_ssp.integrate(times, ssp)
+	# orb_ssp = orbit_ssp.plot(lw=0.6)[0].get_data()
+	# ax_orbit.plot(orb_ssp[0], orb_ssp[1], label = "Spherical Shell")
 	ax.plot(r_s, rc_ssp, label = "Spherical Shell")
 
 if st.checkbox("Double Exponential Disk Potential"):
 	rc_dedp = potential.calcRotcurve(dedp, r_s, phi = 0)
-	orbit_dedp = Orbit(init_cond, **get_physical(dedp))
-	orbit_dedp.integrate(times, dedp)
-	orb_dedp = orbit_dedp.plot(lw=0.6)[0].get_data()
-	ax_orbit.plot(orb_dedp[0], orb_dedp[1], label = "Double Exponential Disk")
+	# orbit_dedp = Orbit(init_cond, **get_physical(dedp))
+	# orbit_dedp.integrate(times, dedp)
+	# orb_dedp = orbit_dedp.plot(lw=0.6)[0].get_data()
+	# ax_orbit.plot(orb_dedp[0], orb_dedp[1], label = "Double Exponential Disk")
 	ax.plot(r_s, rc_dedp, label = "Double Exponential Disk")
 
 if st.checkbox("Two Power Triaxial Potential"):
 	rc_tptp = potential.calcRotcurve(tptp, r_s, phi = 0)
-	orbit_tptp = Orbit(init_cond, **get_physical(tptp))
-	orbit_tptp.integrate(times, tptp)
-	orb_tptp = orbit_tptp.plot(lw=0.6)[0].get_data()
-	ax_orbit.plot(orb_tptp[0], orb_tptp[1], label = "Two Power Triaxial")
+	# orbit_tptp = Orbit(init_cond, **get_physical(tptp))
+	# orbit_tptp.integrate(times, tptp)
+	# orb_tptp = orbit_tptp.plot(lw=0.6)[0].get_data()
+	# ax_orbit.plot(orb_tptp[0], orb_tptp[1], label = "Two Power Triaxial")
 	ax.plot(r_s, rc_tptp, label = "Two Power Triaxial")
 
 if st.checkbox("Dark Matter Halo") and dm_cb == True:
 	rc_lp = potential.calcRotcurve(lp, r_s, phi = 0)
-	orbit_lp = Orbit(init_cond, **get_physical(lp))
-	orbit_lp.integrate(times, lp)
-	orb_lp = orbit_lp.plot(lw=0.6)[0].get_data()
-	ax_orbit.plot(orb_lp[0], orb_lp[1], label = "Dark Matter Halo")
+	# orbit_lp = Orbit(init_cond, **get_physical(lp))
+	# orbit_lp.integrate(times, lp)
+	# orb_lp = orbit_lp.plot(lw=0.6)[0].get_data()
+	# ax_orbit.plot(orb_lp[0], orb_lp[1], label = "Dark Matter Halo")
 	ax.plot(r_s, rc_lp, label = "Dark Matter Halo")
 
 # set labels and the legend for the plot
