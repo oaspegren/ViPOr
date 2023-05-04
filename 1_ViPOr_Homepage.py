@@ -14,8 +14,8 @@ st.markdown("### A teaching tool to understand how particles move in different g
 st.markdown("### Some useful features:")
 st.markdown("- Examining the **rotation curves** produced by different spherically symmetric, axisymmetric and triaxial potentials")
 st.markdown("- Visualizing the primary **spherically symmetric** potentials in two and three dimensions")
+st.markdown("- Plotting the general **axisymmetric** and **triaxial** potentials in two and three dimensions")
 st.markdown("- Understanding the components of the **Milky Way potential**")
-st.markdown("- Plotting the general **axisymmetric** and **triaxial** potentials in multiple dimensions")
 
 st.markdown("### Basic Information About Potentials")
 
@@ -63,8 +63,8 @@ st.latex(r"\nabla^2 \Phi (r, z) = \frac{1}{r^2} \frac{\partial}{\partial r} (r^2
 st.markdown("#### Triaxial Systems")
 
 st.markdown("Triaxial systems are found in elliptical galaxies. In general, they represent the most complicated systems, as they are not always \
-	symmetrical in any of the three directions. Visually, triaxial distributions look like footballs.")
+	symmetrical in any of the three directions. Visually, triaxial distributions look like asymmetrical footballs.")
 
 st.markdown("Solving and characterizing these systems analytically requires multipole expansions and Bessel functions; therefore, these will be too complex \
-	to describe here. However, we include a page that allows the user to manipulate and experiment with this galaxy geometry.")
+	to describe here with equations. However, we include a page that allows the user to manipulate and experiment with this galaxy geometry.")
 

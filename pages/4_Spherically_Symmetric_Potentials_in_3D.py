@@ -38,8 +38,9 @@ st.markdown(
 	Use the sliders to change this value and see what happens to the potential and orbit!
 	''')
 
-st.markdown("NOTE: if the application throws an error after moving the sliders, that's because those parameters are not allowed. \
-	In some cases, the plots may take more than a few moments to generate.")
+st.markdown("NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
+	allowed — please select new ones.")
+
 
 param = st.slider(param1, min_value = min_value, max_value = max_value, step = step)
 

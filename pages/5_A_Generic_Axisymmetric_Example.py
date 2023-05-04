@@ -28,12 +28,15 @@ st.markdown(
 	Use the sliders to change this value and see what happens to the potential and orbit!
 	''')
 
-years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
-radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
-height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
+st.markdown("NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
+	allowed — please select new ones.")
 
 scalelength = st.slider("Scale Length, " + r"$h_r$", min_value = 1, max_value = 100)
 scaleheight = st.slider("Scale Height, " + r"$h_z$", min_value = 1, max_value = 20)
+
+years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
+radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
+height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
 
 pot_fxn_set = DoubleExponentialDiskPotential(hr = scalelength*units.kpc, hz = scaleheight*units.kpc)
 
