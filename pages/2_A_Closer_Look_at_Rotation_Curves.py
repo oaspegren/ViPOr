@@ -83,23 +83,23 @@ phi = 0.0*units.radian
 
 init_cond = [R, vR, vT, z, vz, phi]
 
-orbit_hsp = Orbit(init_cond, **get_physical(hsp))
-orbit_psp = Orbit(init_cond, **get_physical(psp))
-orbit_pspc = Orbit(init_cond, **get_physical(pspc))
-orbit_ssp = Orbit(init_cond, **get_physical(ssp))
-orbit_dedp = Orbit(init_cond, **get_physical(dedp))
-orbit_tptp = Orbit(init_cond, **get_physical(tptp))
-orbit_lp = Orbit(init_cond, **get_physical(lp))
+# orbit_hsp = Orbit(init_cond, **get_physical(hsp))
+# orbit_psp = Orbit(init_cond, **get_physical(psp))
+# orbit_pspc = Orbit(init_cond, **get_physical(pspc))
+# orbit_ssp = Orbit(init_cond, **get_physical(ssp))
+# orbit_dedp = Orbit(init_cond, **get_physical(dedp))
+# orbit_tptp = Orbit(init_cond, **get_physical(tptp))
+# orbit_lp = Orbit(init_cond, **get_physical(lp))
 
 times = numpy.linspace(0.,14.0,3001)*units.Gyr
    
-orbit_hsp.integrate(times, hsp)
-orbit_psp.integrate(times, psp)
-orbit_pspc.integrate(times, pspc)
-orbit_ssp.integrate(times, ssp)
-orbit_dedp.integrate(times, dedp)
-orbit_tptp.integrate(times, tptp)
-orbit_lp.integrate(times, lp)
+# orbit_hsp.integrate(times, hsp)
+# orbit_psp.integrate(times, psp)
+# orbit_pspc.integrate(times, pspc)
+# orbit_ssp.integrate(times, ssp)
+# orbit_dedp.integrate(times, dedp)
+# orbit_tptp.integrate(times, tptp)
+# orbit_lp.integrate(times, lp)
 
 fig, ax = plt.subplots(figsize = (10, 6))
 
