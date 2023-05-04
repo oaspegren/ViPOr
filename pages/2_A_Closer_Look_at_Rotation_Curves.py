@@ -158,21 +158,14 @@ ax.set_ylabel(r"$v_c(R)/v_c(R_0)$")
 
 ax.legend()
 
-ax_orbit.set_xlabel(r"$R$ (kpc)")
-ax_orbit.set_ylabel(r"$z$ (kpc)")
-ax_orbit.set_title("Orbit, in R vs. z")
+# ax_orbit.set_xlabel(r"$R$ (kpc)")
+# ax_orbit.set_ylabel(r"$z$ (kpc)")
+# ax_orbit.set_title("Orbit, in R vs. z")
 
-ax_orbit.legend()
+# ax_orbit.legend()
 
 st.pyplot(fig)
 
-fig, ax = plt.subplots()
+# raw_html = orbit.animate()._repr_html_()
+# st.components.v1.html(raw_html, height = 800)
 
-raw_html = orbit.animate()._repr_html_()
-st.components.v1.html(raw_html, height = 800)
-
-fig0, ax0 = plt.subplots()
-ax0.plot(reg[0], reg[1])
-ax0.set_xlabel(r"$R$ (kpc)")
-ax0.set_ylabel(r"$z$ (kpc)")
-ax0.set_title("Orbit, in R vs. z")
