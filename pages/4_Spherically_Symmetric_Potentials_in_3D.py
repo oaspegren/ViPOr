@@ -12,7 +12,7 @@ import numpy
 
 import streamlit as st
 
-from PlotPotentialandOrbit2D import plot_orbit_3D
+from PlotPotentialandOrbit3D import plot_orbit_3D
 from pick_potential import pick_potential, set_potential
 
 st.markdown("## Experimenting with Spherically Symmetric Orbits in Three Dimensions")
