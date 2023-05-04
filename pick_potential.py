@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy
 import streamlit as st
 
-@st.cache_data
+#@st.cache_data
 def pick_potential(pot_fxn, index):
 
 	mod_params = [r"$\alpha$, the power law exponent", r"$\alpha$ and $\beta$, the power law exponents", r"$a$, the radius of the shell", r"$R$, the radius of the sphere", r"$b$, the scale parameter"]
@@ -59,7 +59,7 @@ def pick_potential(pot_fxn, index):
 
 	return parameters, equation, param1, density_string, latex, min_value, max_value, step
 
-@st.cache_data
+#@st.cache_data
 def set_potential(pot_fxn, param):
 
 	if pot_fxn == "Power Spherical Potential":
