@@ -73,7 +73,7 @@ def plot_orbit_3D(pot_fxn, years, R, z):
 	ax2.set_zlabel(r"$v_z$")
 	ax2.set_title("Orbital Radius vs. Radial and Vertical Velocities")
 
-	raw_html = orbit.animate3d()._repr_html_()
+	raw_html = orbit.animate3d(d1 = ['x', 'R'], d2 = ['y', 'vR'], d3 = ['z', 'z'])._repr_html_()
 	density = galpy.potential.plotPotentials(pot_fxn)
 
 	return fig0, fig1, fig2, raw_html, density

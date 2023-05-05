@@ -67,7 +67,7 @@ def plot_orbit_2D(_pot_fxn, _years, _R, _z):
 	ax3.set_ylabel(r"$y$ (kpc)")
 	ax3.set_title("Orbit, Projected Onto X-Y Plane")
 
-	raw_html = orbit.animate()._repr_html_()
+	raw_html = orbit.animate(d1=['x','R'],d2=['y','z'])._repr_html_()
 
 	density = galpy.potential.plotPotentials(_pot_fxn)
 
