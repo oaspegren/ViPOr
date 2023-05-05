@@ -10,3 +10,4 @@ setuptools.setup(
      install_requires=["streamlit", "numpy", "galpy", "matplotlib", "astropy", "numexpr"],
      python_requires='>=3'
 )
+
