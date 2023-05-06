@@ -19,7 +19,13 @@ This application relies on **galpy**, a package that assists in calculating pote
 
 If the user would like to run the application directly from this Github repository with the link below, they will not need to perform any installations — the required dependencies are listed and installed with the *requirements.txt* file above. 
 
-# LINK TO STREAMLIT PAGE
+# RUNNING VIPOR
+
+The user has two options to run ViPOr. Either they can download the code from this repository, install the package, unzip the compressed file and type in the command line:
+
+streamlit run /path/to/unzipped/file/ViPOr/1_ViPOr_Homepage.py
+
+Or, click the link below and be redirected to the application online. 
 
 https://oaspegren-vipor-1-vipor-homepage-nmt112.streamlit.app/
 
