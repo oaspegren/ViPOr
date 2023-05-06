@@ -21,11 +21,17 @@ If the user would like to run the application directly from this Github reposito
 
 # RUNNING VIPOR
 
-The user has two options to run ViPOr. Either they can download the code from this repository, install the package, unzip the compressed file and type in the command line:
+The user has two options to run ViPOr. 
 
-streamlit run /path/to/unzipped/file/ViPOr/1_ViPOr_Homepage.py
+The first option is to download the entire code from this repository, unzipping the compressed file, navigating to the top-level directory and installing the package by running:
 
-Or, click the link below and be redirected to the application online. 
+pip install .
+
+Then, while still in the top-level directory, run: 
+
+streamlit run ./ViPOr/1_ViPOr_Homepage.py
+
+Alternatively, the user may click the link below and be redirected to the website, where they can run the application directly online. 
 
 https://oaspegren-vipor-1-vipor-homepage-nmt112.streamlit.app/
 
