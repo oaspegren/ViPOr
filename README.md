@@ -33,4 +33,4 @@ Then, while still in the top-level directory, run:
 
 Alternatively, the user may click the link below and be redirected to the website, where they can run the application directly online. 
 
-https://oaspegren-vipor-1-vipor-homepage-nmt112.streamlit.app/
+[https://oaspegren-vipor-1-vipor-homepage-nmt112.streamlit.app/](https://oaspegren-vipor-vipor1-vipor-homepage-zx0uzt.streamlit.app/)
