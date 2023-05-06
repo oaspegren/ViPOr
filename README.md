@@ -25,14 +25,12 @@ The user has two options to run ViPOr.
 
 The first option is to download the entire code from this repository, unzipping the compressed file, navigating to the top-level directory and installing the package by running:
 
-pip install .
+'pip install .'
 
 Then, while still in the top-level directory, run: 
 
-streamlit run ./ViPOr/1_ViPOr_Homepage.py
+'streamlit run ./ViPOr/1_ViPOr_Homepage.py'
 
 Alternatively, the user may click the link below and be redirected to the website, where they can run the application directly online. 
 
 https://oaspegren-vipor-1-vipor-homepage-nmt112.streamlit.app/
-
-![XKCD comic about orbital mechanics](https://imgs.xkcd.com/comics/orbital_mechanics.png)
