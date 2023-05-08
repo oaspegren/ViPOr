@@ -57,7 +57,7 @@ st.markdown("The first is an **R vs. z** plot, which displays the path of the or
 
 st.pyplot(fig0, bbox_inches = "tight", pad_inches = 0.5)
 
-st.markdown("The second is an **Radius vs. radial velocity** plot, which displays the radial velocity of the particle at each radius — how fast the particle moves based on its distance \
+st.markdown("The second is an **radius vs. radial velocity** plot, which displays the radial velocity of the particle at each radius — how fast the particle moves based on its distance \
 	from the galactic center. We can track where the velocity is positive and where it is negative, which indicates the direction the particle orbits. Bound orbits will \
 	fluctuate between positive and negative, while unbound orbits will increase in radial velocity off into infinity.")
 
