@@ -15,6 +15,8 @@ The application is composed of several pages:
 
 It leads the viewer through each of these modules, however the user is free to skip around and go out of order. At the beginning, on the home page, we present an overview of what gravitational potentials are, the differen forms they come in and how we derive particle motion from them.
 
+The pages directory contains all the streamlit pages, and is only useful for running the web application. The main directory contains several separate functions from streamlit pages, which can be used to generate and obtain plots for potentials and orbits. 
+
 # DEPENDENCIES
 
 This application relies on **galpy**, a package that assists in calculating potentials, plotting orbits, and performing other actions related to galaxy dynamics. Galpy uses numpy, matplotlib, numexpr (used for characterizing and plotting orbits), and astropy (in this application, for manipulating and converting units). 
