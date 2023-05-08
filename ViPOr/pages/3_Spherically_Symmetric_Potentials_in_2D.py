@@ -33,7 +33,8 @@ pot_fxn = st.selectbox('Select a potential function:', pot_names)
 pot_name_string = "You've selected the **"+pot_fxn+"**."
 st.markdown(pot_name_string)
 
-# get information from the pick potential function
+# given the chosen potential, get the equation, parameter of interest, latex string of the equation, as well as the minimum,
+# maximum and step values for the parameter's slider
 parameters, equation, param1, density_string, latex, min_value, max_value, step = pick_potential(pot_fxn, pot_names.index(pot_fxn))
 
 # print the form of the mass distribution density
