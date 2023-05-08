@@ -29,8 +29,8 @@ def pick_potential(pot_fxn, index):
 	step:
 	'''	
 
-	mod_params = [r"$\alpha$, the power law exponent", r"$\alpha$ and $\beta$, the power law exponents", r"$a$, the radius of the shell", r"$R$, the radius of the sphere", r"$b$, the scale parameter"]
-	eqns = [r'''\rho(r)= \frac{\text{amp}}{r^{3}} \left(\frac{r_1}{r}\right)^\alpha''', r'''\rho(r)= \frac{\text{amp}}{4\pi a^3} \frac{1}{r^{\alpha} (1 + r/a)^{\beta-\alpha}}''',\
+	mod_params = [r"$\alpha$, the power law exponent", r"$a$, the radius of the shell", r"$R$, the radius of the sphere", r"$b$, the scale parameter"]
+	eqns = [r'''\rho(r)= \frac{\text{amp}}{r^{3}} \left(\frac{r_1}{r}\right)^\alpha''', \
 	r'''\rho(r)= \frac{\text{amp}}{4\pi a^2} \delta(r-a)''', r'''\rho(r)= \rho_0''', r'''\Phi(R, z) = \frac{\text{amp}}{\sqrt{R^2 + z^2 + b^2}''']
 
 	pot_name_string = "You've selected the **"+pot_fxn+"**."
@@ -46,15 +46,8 @@ def pick_potential(pot_fxn, index):
 		density_string = "This potential is characterized by the equation:"
 		latex = r'''\Phi(R,z) = - \frac{\text{amp}}{\sqrt{R^2 + z^2 + b^2}}'''
 
-	if pot_fxn == "Two Power Spherical Potential":
-		param = "Power Law Exponent, " + r"$\alpha$"
-		param2 = "Power Law Exponent,"+ " and "+"r$\beta$"
-		min_value = 0.0
-		max_value = 6.0
-		step = 0.25
-		param1 = [param, param2]
 
-	elif pot_fxn == "Power Spherical Potential":
+	if pot_fxn == "Power Spherical Potential":
 		param1 = "Power Law Exponent, " + r"$\alpha$"
 		min_value = 0.0
 		max_value = 6.0

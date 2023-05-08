@@ -45,14 +45,8 @@ st.markdown(
 st.markdown("NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
 	allowed — please select new ones.")
 
-if pot_fxn == "Two Power Spherical Potential":
-	param = st.slider(param1[0], min_value = min_value, max_value = max_value, step = step)
-	param2 = st.slider(param1[1], min_value = min_value, max_value = max_value, step = step)
-	pot_fxn_set = set_potential(pot_fxn, [param, param2])
-
-else:
-	param = st.slider(param1, min_value = min_value, max_value = max_value, step = step)
-	pot_fxn_set = set_potential(pot_fxn, param)
+param = st.slider(param1, min_value = min_value, max_value = max_value, step = step)
+pot_fxn_set = set_potential(pot_fxn, param)
 
 years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
 radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
