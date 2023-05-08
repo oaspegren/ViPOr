@@ -42,8 +42,8 @@ param_b = st.slider("Y-to-X Axis Ratio, " + r"$b$", min_value = 0.5, max_value =
 param_c = st.slider("Z-to-X Axis Ratio, " + r"$c$", min_value = 0.5, max_value = 8.0, step = 0.25)
 
 years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
-radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
-height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
+radius = st.slider("Set the initial distance from the galactic center (kpc):", min_value = 0.0, max_value = 50.0, step = 1.0)
+height = st.slider("Set the initial height from the galactic plane (kpc):", min_value = 0.0, max_value = 50.0, step = 1.0)
 
 pot_fxn_set = PowerTriaxialPotential(alpha = param, b = param_b, c = param_c)
 

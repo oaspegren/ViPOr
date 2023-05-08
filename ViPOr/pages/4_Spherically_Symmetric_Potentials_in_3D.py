@@ -56,8 +56,8 @@ param = st.slider(param1, min_value = min_value, max_value = max_value, step = s
 pot_fxn_set = set_potential(pot_fxn, param)
 
 years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
-radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
-height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
+radius = st.slider("Set the initial distance from the galactic center (kpc):", min_value = 0.0, max_value = 50.0, step = 1.0)
+height = st.slider("Set the initial height from the galactic plane (kpc):", min_value = 0.0, max_value = 50.0, step = 1.0)
 
 # call plot_orbit_3D, which obtains the three plots and the animation for the given potential and initial conditions
 

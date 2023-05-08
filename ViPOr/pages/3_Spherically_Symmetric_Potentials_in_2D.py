@@ -59,8 +59,8 @@ pot_fxn_set = set_potential(pot_fxn, param)
 
 # initialize sliders for the integration time, initial radius and initial height from the galactic plane
 years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
-radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
-height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
+radius = st.slider("Set the initial distance from the galactic center (kpc):", min_value = 0.0, max_value = 50.0, step = 1.0)
+height = st.slider("Set the initial height from the galactic plane (kpc):", min_value = 0.0, max_value = 50.0, step = 1.0)
 
 # get two dimensional plots for the selected potential and orbit
 fig0, fig1, fig2, fig3, raw_html, raw_html_2, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
