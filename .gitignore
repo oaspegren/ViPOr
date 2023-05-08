@@ -1,0 +1,17 @@
+
+ViPOr.egg-info/top_level.txt
+ViPOr.egg-info/SOURCES.txt
+build/lib/ViPOr/1_ViPOr_Homepage.py
+build/lib/ViPOr/__init__.py
+build/lib/ViPOr/pages/2_A_Closer_Look_at_Rotation_Curves.py
+build/lib/ViPOr/pages/3_Spherically_Symmetric_Potentials_in_2D.py
+build/lib/ViPOr/pages/4_Spherically_Symmetric_Potentials_in_3D.py
+build/lib/ViPOr/pages/5_A_Generic_Axisymmetric_Example.py
+build/lib/ViPOr/pages/6_A_Generic_Triaxial_Example.py
+build/lib/ViPOr/pages/7_Understanding_Milky_Way_Potential.py
+build/lib/ViPOr/pick_potential.py
+build/lib/ViPOr/PlotPotentialandOrbit2D.py
+build/lib/ViPOr/PlotPotentialandOrbit3D.py
+ViPOr.egg-info/dependency_links.txt
+ViPOr.egg-info/PKG-INFO
+ViPOr.egg-info/requires.txt
