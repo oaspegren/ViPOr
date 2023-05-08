@@ -80,7 +80,9 @@ st.markdown("Lastly, we show **the projection of the orbit into the x-y plane**,
 
 st.pyplot(fig3, bbox_inches = "tight", pad_inches = 0.5)
 
-st.markdown("Finally, there is an animation that displays the movement of the particle perpendicular to the galactic plane — its vertical height from the galactic plane \
+st.markdown("Finally, there are two animations that displays the movement of the particle perpendicular to the galactic plane — its vertical height from the galactic plane \
 	at each radius — as well as the motion of the particle in the galactic plane.")
 
-st.components.v1.html(raw_html, height = 800, width = 2000)
+st.components.v1.html(raw_html, height = 800)
+st.components.v1.html(raw_html_2, height = 800)
+

@@ -92,11 +92,12 @@ def plot_orbit_2D(_pot_fxn, _years, _R, _z):
 	ax3.set_title("Orbit, Projected Onto X-Y Plane")
 
 	# get the raw html data for the two-dimensional orbit in Cartesian and R vs. z coordinates
-	raw_html = orbit.animate(d1=['x','R'],d2=['y','z'])._repr_html_()
+	raw_html = orbit.animate(d1=['x'],d2=['y'])._repr_html_()
+	raw_html_2 = orbit.animate(d1=['R'],d2=['z'])._repr_html_()
 
 	# get the plot of the potential
 	density = galpy.potential.plotPotentials(_pot_fxn)
 
-	return fig0, fig1, fig2, fig3, raw_html, density
+	return fig0, fig1, fig2, fig3, raw_html, raw_html_2, density
 
 
