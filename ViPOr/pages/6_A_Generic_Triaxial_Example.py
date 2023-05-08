@@ -18,7 +18,7 @@ st.markdown("We now look at an example of an triaxial potential. These are orbit
 st.markdown("The general equation for the density of a power-law triaxial distribution is:")
 st.latex(r'''\rho(r)= \text{amp} \, r^{-3} \left(\frac{r_1}{r}\right)^\alpha''')
 
-param_string = r"For this potential, you can modify the power-law exponent, $\alpha$."
+param_string = r"For this potential, you can modify the power-law exponent, $\alpha$, as well as $b$, the y-to-x axis ratio, and $c$, the z-to-x axis ratio."
 
 # print out the string above
 st.markdown(param_string)
@@ -33,14 +33,17 @@ st.markdown("NOTE: This may take a few moments to run and generate plots. If the
 
 # create sliders for the key parameter, length of time over which to integrate, radius and height above the galactic plane
 param = st.slider("Power-law Exponent, " + r"$\alpha$", min_value = 0.5, max_value = 5.0, step = 0.25)
+param_b = st.slider("Y-to-X Axis Ratio, " + r"$b$", min_value = 0.5, max_value = 8.0, step = 0.25)
+param_c = st.slider("Z-to-X Axis Ratio, " + r"$c$", min_value = 0.5, max_value = 8.0, step = 0.25)
+
 years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
 radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
 height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
 
-pot_fxn_set = PowerTriaxialPotential(alpha = param)
+pot_fxn_set = PowerTriaxialPotential(alpha = param, b = param_b, c = param_c)
 
 # get all the two-dimensional plots and data for the animations from plot_orbit_2D
-fig0, fig1, fig2, fig3, raw_html, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
+fig0, fig1, fig2, fig3, raw_html, raw_html_2, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
 
 st.markdown("Below is a plot of the potential for the Milky Way with the components selected, over each value of R and \
 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \
@@ -71,11 +74,12 @@ st.markdown("Lastly, we show **the projection of the orbit into the x-y plane**,
 # show the orbit in Cartesian coordinates 
 st.pyplot(fig3, bbox_inches = "tight", pad_inches = 0.5)
 
-st.markdown("Finally, there is an animation that displays the movement of the particle in the meridional plane — once again, its vertical height from the galactic plane \
-	at each radius.")
+st.markdown("Finally, there are two animations that displays the movement of the particle perpendicular to the galactic plane — its vertical height from the galactic plane \
+	at each radius — as well as the motion of the particle in the galactic plane.")
 
 # show the animation in two dimensions
 st.components.v1.html(raw_html, height = 800)
+st.components.v1.html(raw_html_2, height = 800)
 
 st.markdown("We can also explore this orbit in 3 dimensions... ")
 

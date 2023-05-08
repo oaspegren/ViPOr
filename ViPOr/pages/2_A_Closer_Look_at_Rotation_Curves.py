@@ -31,7 +31,14 @@ st.markdown("- **:green[Spherical Shell Potential]**: An shell with infinitesima
 st.markdown("- **:green[Double Exponential Disk Potential]**: A distribution that is exponential in both the radius and height.")
 st.markdown("- **:green[Two Power Triaxial Potential]**: A distribution with no symmetries, and no conserved component of the angular momentum.")
 
-st.markdown("In addition, you can add **:green[spiral arms]** or **:green[dark matter]** to further alter the rotation curves:")
+st.markdown("Homogeneous Sphere, Power Spherical, Power Spherical with Cutoff, and Spherical Shell are all spherically symmetric potentials. Double Exponential \
+	disk is axisymmetric, while Two Power Triaxial is a triaxial potential.")
+st.markdown("In general, most galaxy potentials have either a single or double power law form. For example, the modified Hubble profile and Plummer Model are both \
+	single power laws, while the NFW, Hernquist, Jaffe and Moore profiles are all double power laws. If $\alpha$ for a single power law is \
+	0, the potential becomes that of a homogeneous sphere, while if $\alpha$ is 2, the potential takes the form of a singular isothermal sphere.")
+
+st.markdown("In addition, you can add **:green[spiral arms]** or **:green[dark matter]** to further alter the rotation curves. The NFW Potential is the form \
+	for most dark matter haloes.")
 
 # initialize the list of r values
 
@@ -43,7 +50,7 @@ psp = potential.PowerSphericalPotential()
 pspc = potential.PowerSphericalPotentialwCutoff()
 ssp = potential.SphericalShellPotential()
 dedp = potential.DoubleExponentialDiskPotential()
-tptp = potential.TwoPowerTriaxialPotential()
+tptp = potential.TwoPowerTriaxialPotential(b = 4, c = 16)
 lp = potential.NFWPotential(amp = (6*10**11)*units.solMass)
 
 # Create a checkbox for the user to add spiral arms, and a slider for the number of spiral arms to add

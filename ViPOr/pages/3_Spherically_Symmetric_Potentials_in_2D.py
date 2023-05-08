@@ -52,7 +52,7 @@ years = st.slider("Time (Gyr):", min_value = 0, max_value = 14)
 radius = st.slider("Set the initial distance from the galactic center:", min_value = 0.0, max_value = 50.0, step = 1.0)
 height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
 
-fig0, fig1, fig2, fig3, raw_html, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
+fig0, fig1, fig2, fig3, raw_html, raw_html_2, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
 
 st.markdown("Below is a plot of the potential over each value of R and \
 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \

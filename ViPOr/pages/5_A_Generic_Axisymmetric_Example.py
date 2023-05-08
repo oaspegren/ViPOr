@@ -42,7 +42,7 @@ pot_fxn_set = DoubleExponentialDiskPotential(hr = scalelength*units.kpc, hz = sc
 
 #plotPotentials(pot_fxn_set)
 
-fig0, fig1, fig2, fig3, raw_html, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
+fig0, fig1, fig2, fig3, raw_html, raw_html_2, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
 
 st.markdown("This is what a density plot of the potential looks like.")
 
@@ -68,10 +68,11 @@ st.markdown("Lastly, we show **the projection of the orbit into the x-y plane**,
 
 st.pyplot(fig3, bbox_inches = "tight", pad_inches = 0.5)
 
-st.markdown("Finally, there is an animation that displays the movement of the particle in the meridional plane — once again, its vertical height from the galactic plane \
-	at each radius.")
+st.markdown("Finally, there are two animations that displays the movement of the particle perpendicular to the galactic plane — its vertical height from the galactic plane \
+	at each radius — as well as the motion of the particle in the galactic plane.")
 
 st.components.v1.html(raw_html, height = 800)
+st.components.v1.html(raw_html_2, height = 800)
 
 st.markdown("We can also explore this orbit in 3 dimensions... ")
 
