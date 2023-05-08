@@ -104,6 +104,9 @@ def set_potential(pot_fxn, param):
 	elif pot_fxn == "Spherical Shell Potential":
 		pot_fxn_set = SphericalShellPotential(a = param*units.kpc)
 
+	elif pot_fxn == "Two Power Spherical Potential":
+		pot_fxn_set = TwoPowerSphericalPotential(alpha = param[0], beta = param[1])
+
 	else:
 		pot_fxn_set = PlummerPotential(b = param)
 

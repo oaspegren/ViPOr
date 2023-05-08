@@ -48,7 +48,7 @@ st.markdown("NOTE: This may take a few moments to run and generate plots. If the
 if pot_fxn == "Two Power Spherical Potential":
 	param = st.slider(param1[0], min_value = min_value, max_value = max_value, step = step)
 	param2 = st.slider(param1[1], min_value = min_value, max_value = max_value, step = step)
-	pot_fxn_set = set_potential(pot_fxn, alpha = param, beta = param2)
+	pot_fxn_set = set_potential(pot_fxn, param = [param, param2])
 
 else:
 	param = st.slider(param1, min_value = min_value, max_value = max_value, step = step)
