@@ -23,8 +23,9 @@ st.markdown("- Visualizing the primary :green[**spherically symmetric**] potenti
 st.markdown("- Plotting the general :green[**axisymmetric**] and :green[**triaxial**] potentials in two and three dimensions")
 st.markdown("- Understanding the components of the :green[**Milky Way potential**]")
 
-st.markdown("Below is a general overview of how gravitational potentials work, what forms they come in and how we can derive the motion of \
-particles within a galaxy from them.")
+st.markdown("Browse through the module options on the left-hand side to explore how gravitational potentials work. You can either go in order,\
+	or skip around. The remainder of this page gives a general overview of how gravitational potentials work, what forms they come in and how we can derive the motion of \
+	particles within a galaxy from them.")
 
 # overview of potentials
 st.markdown("### Basic Information About Potentials")
