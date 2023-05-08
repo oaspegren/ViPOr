@@ -46,7 +46,7 @@ def pick_potential(pot_fxn, index):
 		density_string = "This potential is characterized by the equation:"
 		latex = r'''\Phi(R,z) = - \frac{\text{amp}}{\sqrt{R^2 + z^2 + b^2}}'''
 
-	 if pot_fxn == "Two Power Spherical Potential":
+	if pot_fxn == "Two Power Spherical Potential":
 	 	param = "Power Law Exponent, " + r"$\alpha$"
 	 	param2 = "Power Law Exponent,"+ " and "+"r$\beta$"
 	 	min_value = 0.0
