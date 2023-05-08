@@ -78,8 +78,8 @@ st.markdown("Finally, there are two animations that displays the movement of the
 	at each radius — as well as the motion of the particle in the galactic plane.")
 
 # show the animation in two dimensions
-st.components.v1.html(raw_html, height = 800)
-st.components.v1.html(raw_html_2, height = 800)
+st.components.v1.html(raw_html, height = 600)
+st.components.v1.html(raw_html_2, height = 600)
 
 st.markdown("We can also explore this orbit in 3 dimensions... ")
 

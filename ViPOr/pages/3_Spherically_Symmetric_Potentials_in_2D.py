@@ -83,6 +83,6 @@ st.pyplot(fig3, bbox_inches = "tight", pad_inches = 0.5)
 st.markdown("Finally, there are two animations that displays the movement of the particle perpendicular to the galactic plane — its vertical height from the galactic plane \
 	at each radius — as well as the motion of the particle in the galactic plane.")
 
-st.components.v1.html(raw_html, height = 800)
-st.components.v1.html(raw_html_2, height = 800)
+st.components.v1.html(raw_html, height = 600)
+st.components.v1.html(raw_html_2, height = 600)
 

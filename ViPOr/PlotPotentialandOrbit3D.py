@@ -86,7 +86,7 @@ def plot_orbit_3D(pot_fxn, years, R, z):
 
 	# get the raw html for the animation and the contour plot of the potential, so these can be plotted with streamlit
 	raw_html = orbit.animate3d()._repr_html_()
-	density = galpy.potential.plotPotentials(pot_fxn)
+	density = galpy.potential.plotPotentials(pot_fxn, phi = 0.0*units.radian)
 
 	return fig0, fig1, fig2, raw_html, density
 
