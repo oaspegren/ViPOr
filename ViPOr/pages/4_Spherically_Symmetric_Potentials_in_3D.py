@@ -60,7 +60,13 @@ radius = st.slider("Set the initial distance from the galactic center:", min_val
 height = st.slider("Set the initial height from the galactic plane:", min_value = 0.0, max_value = 50.0, step = 1.0)
 
 # call plot_orbit_3D, which obtains the three plots and the animation for the given potential and initial conditions
-fig0, fig1, fig2, raw_html, density = plot_orbit_3D(pot_fxn_set, years, radius, height)
+
+try:
+	fig0, fig1, fig2, raw_html, density = plot_orbit_3D(pot_fxn_set, years, radius, height)
+
+except ValueError:
+	
+	st.markdown("Please select other initial conditions!")
 
 st.markdown("Below is a plot of the potential over each value of R and \
 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \

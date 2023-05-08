@@ -12,16 +12,16 @@ st.set_page_config(
 
 # some introductory text with basic information about gravitational potentials, forces and orbits
 
-st.markdown("# Welcome to :green[ViPOr]: :green[Vi]sualizing :green[P]otentials and :green[Or]bits with Python!")
+st.markdown("# Welcome to :green[ViPOr] :green[Vi]sualizing :green[P]otentials and :green[Or]bits with Python!")
 
 st.markdown("### A teaching tool to understand how particles move in different galaxy potentials.")
 
 # overview of ViPOr's features
 st.markdown("### Some useful features:")
-st.markdown("- Examining the :green[**rotation curves**]: produced by different spherically symmetric, axisymmetric and triaxial potentials")
-st.markdown("- Visualizing the primary :green[**spherically symmetric**]: potentials in two and three dimensions")
-st.markdown("- Plotting the general :green[**axisymmetric**]: and :green[**triaxial**]: potentials in two and three dimensions")
-st.markdown("- Understanding the components of the :green[**Milky Way potential**]:")
+st.markdown("- Examining the :green[**rotation curves**] produced by different spherically symmetric, axisymmetric and triaxial potentials")
+st.markdown("- Visualizing the primary :green[**spherically symmetric**] potentials in two and three dimensions")
+st.markdown("- Plotting the general :green[**axisymmetric**] and :green[**triaxial**] potentials in two and three dimensions")
+st.markdown("- Understanding the components of the :green[**Milky Way potential**]")
 
 st.markdown("Below is some general information about gravitational potentials and the resulting orbits within galaxies")
 
@@ -51,7 +51,7 @@ st.latex(r'''
 st.markdown("In practice, it's often much easier to compute and visualize the graviational potential than it is the force; therefore, we can \
 	start by computing the mass distribution, determining the potential and then taking the gradient to yield the force on a particle.")
 
-st.markdown("Galaxy systems can be organized into three distinct categories, depending on their symmetries: :green[**spherically symmetric**]:, :green[**axisymmetric**]: and :green[**triaxial**]:.")
+st.markdown("Galaxy systems can be organized into three distinct categories, depending on their symmetries: :green[**spherically symmetric**], :green[**axisymmetric**] and :green[**triaxial**].")
 
 # overview of spherically symmetric potentials
 st.markdown("#### Spherically Symmetric Systems")

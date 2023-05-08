@@ -24,16 +24,16 @@ st.markdown("#### Walk through the tutorial below to explore how different poten
 	rotation curve of a galaxy.")
 
 st.markdown("The potentials we will investigate here are:")
-st.markdown("- **:green[Homogeneous Sphere Potential]**: A sphere with a constant density.")
-st.markdown("- **:green[Power Spherical Potential]**: A sphere whose density declines with a power law relation.")
-st.markdown("- **:green[Power Spherical Potential with Cutoff]**: A sphere whose density declines with a power law relation and cuts off at a given radius.")
-st.markdown("- **:green[Spherical Shell Potential]**: An shell with infinitesimal thickness.")
-st.markdown("- **:green[Double Exponential Disk Potential]**: A distribution that is exponential in both the radius and height.")
-st.markdown("- **:green[Two Power Triaxial Potential]**: A distribution with no symmetries, and no conserved component of the angular momentum.")
+st.markdown("- **:green[Homogeneous Sphere Potential]** A sphere with a constant density.")
+st.markdown("- **:green[Power Spherical Potential]** A sphere whose density declines with a power law relation.")
+st.markdown("- **:green[Power Spherical Potential with Cutoff]** A sphere whose density declines with a power law relation and cuts off at a given radius.")
+st.markdown("- **:green[Spherical Shell Potential]** An shell with infinitesimal thickness.")
+st.markdown("- **:green[Double Exponential Disk Potential]** A distribution that is exponential in both the radius and height.")
+st.markdown("- **:green[Two Power Triaxial Potential]** A distribution with no symmetries, and no conserved component of the angular momentum.")
 
 st.markdown("Homogeneous Sphere, Power Spherical, Power Spherical with Cutoff, and Spherical Shell are all spherically symmetric potentials. Double Exponential \
 	disk is axisymmetric, while Two Power Triaxial is a triaxial potential.")
-st.markdown("In general, most galaxy potentials have either a single or double power law form. For example, the modified Hubble profile and Plummer Model are both \
+st.markdown(r"In general, most galaxy potentials have either a single or double power law form. For example, the modified Hubble profile and Plummer Model are both \
 	single power laws, while the NFW, Hernquist, Jaffe and Moore profiles are all double power laws. If $\alpha$ for a single power law is \
 	0, the potential becomes that of a homogeneous sphere, while if $\alpha$ is 2, the potential takes the form of a singular isothermal sphere.")
 
