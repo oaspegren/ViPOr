@@ -1,3 +1,6 @@
+# this page shows a generic example of an axisymmetric potential, which users can manipulate and then visualize the resulting orbits in 
+# two and three dimensions
+
 from galpy.util.conversion import get_physical
 import numexpr
 import matplotlib.pyplot as plt

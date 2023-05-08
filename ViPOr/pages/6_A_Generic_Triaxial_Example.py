@@ -1,3 +1,6 @@
+# this page provides an example of a triaxial potential for users to manipulate, and will show various two and three dimensional plots for
+# the resulting potential
+
 from galpy.util.conversion import get_physical
 import numexpr
 import matplotlib.pyplot as plt
@@ -7,7 +10,7 @@ from galpy.potential import PowerTriaxialPotential, plotPotentials
 import numpy
 import streamlit as st
 
-
+# import functions from other files
 from PlotPotentialandOrbit2D import plot_orbit_2D
 from PlotPotentialandOrbit3D import plot_orbit_3D
 
@@ -16,7 +19,9 @@ st.markdown("We now look at an example of an triaxial potential. These are orbit
 
 # give the general equation for the axisymmetric orbit
 st.markdown("The general equation for the density of a power-law triaxial distribution is:")
-st.latex(r'''\rho(r)= \text{amp} \, r^{-3} \left(\frac{r_1}{r}\right)^\alpha''')
+st.latex(r'''\rho(r)= \frac{\text{amp}}{r_1^{3}} \left(\frac{r_1}{m}\right)^\alpha''')
+
+st.markdown(r"where $m^2$ = $x^2$ + $y^2/b^2$ + $z^2/c^2$")
 
 param_string = r"For this potential, you can modify the power-law exponent, $\alpha$, as well as $b$, the y-to-x axis ratio, and $c$, the z-to-x axis ratio."
 
@@ -45,7 +50,7 @@ pot_fxn_set = PowerTriaxialPotential(alpha = param, b = param_b, c = param_c)
 # get all the two-dimensional plots and data for the animations from plot_orbit_2D
 fig0, fig1, fig2, fig3, raw_html, raw_html_2, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
 
-st.markdown("Below is a plot of the potential for the Milky Way with the components selected, over each value of R and \
+st.markdown("Below is a plot of the potential over each value of R and \
 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \
 		increases as the object gets closer to the center.")
 
