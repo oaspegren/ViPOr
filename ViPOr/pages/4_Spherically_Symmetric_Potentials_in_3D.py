@@ -64,37 +64,67 @@ height = st.slider("Set the initial height from the galactic plane:", min_value 
 try:
 	fig0, fig1, fig2, raw_html, density = plot_orbit_3D(pot_fxn_set, years, radius, height)
 
-except ValueError:
-	
-	st.markdown("Please select other initial conditions!")
-
-st.markdown("Below is a plot of the potential over each value of R and \
+	st.markdown("Below is a plot of the potential over each value of R and \
 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \
 		increases as the object gets closer to the center.")
 
-# plot the potential
+	# plot the potential
 
-st.pyplot(density.get_figure())
+	st.pyplot(density.get_figure())
 
-st.markdown("This first plot shows the orbit in **x, y and z coordinates**. With this we can see how the particle will move \
-	in three-dimensional space.")
+	st.markdown("This first plot shows the orbit in **x, y and z coordinates**. With this we can see how the particle will move \
+		in three-dimensional space.")
 
-# plot the orbit in Cartesian coordinates
-st.pyplot(fig0, bbox_inches = "tight", pad_inches = 0.5)
+	# plot the orbit in Cartesian coordinates
+	st.pyplot(fig0, bbox_inches = "tight", pad_inches = 0.5)
 
-st.markdown("This next plot shows the relationship between the **orbital radius, radial velocity and height from the disk plane**. \
-	This shows how the radial velocity of the particle changes with its position inside the distribution.")
+	st.markdown("This next plot shows the relationship between the **orbital radius, radial velocity and height from the disk plane**. \
+		This shows how the radial velocity of the particle changes with its position inside the distribution.")
 
-# plot the orbit with r vs. v_R vs. z
-st.pyplot(fig1, bbox_inches = "tight", pad_inches = 0.5)
+	# plot the orbit with r vs. v_R vs. z
+	st.pyplot(fig1, bbox_inches = "tight", pad_inches = 0.5)
 
-st.markdown("The last plot shows the relationship between the particle's **orbital radius, radial velocity and vertical velocity**. \
-	This plot shows how fast the particle is moving radially and vertically, depending on its distance from the center of the galaxy.")
+	st.markdown("The last plot shows the relationship between the particle's **orbital radius, radial velocity and vertical velocity**. \
+		This plot shows how fast the particle is moving radially and vertically, depending on its distance from the center of the galaxy.")
 
-# plot the orbit with r vs. v_r vs. v_z.
-st.pyplot(fig2, bbox_inches = "tight", pad_inches = 0.5)
+	# plot the orbit with r vs. v_r vs. v_z.
+	st.pyplot(fig2, bbox_inches = "tight", pad_inches = 0.5)
 
-# show the animated orbit in 3D
-st.markdown("And now we display the 3D animation of the orbit.")
-st.components.v1.html(raw_html, height = 800)
+	# show the animated orbit in 3D
+	st.markdown("And now we display the 3D animation of the orbit.")
+	st.components.v1.html(raw_html, height = 800)
+
+except ValueError:
+
+	st.markdown("Please select other initial conditions!")
+
+# st.markdown("Below is a plot of the potential over each value of R and \
+# 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \
+# 		increases as the object gets closer to the center.")
+
+# # plot the potential
+
+# st.pyplot(density.get_figure())
+
+# st.markdown("This first plot shows the orbit in **x, y and z coordinates**. With this we can see how the particle will move \
+# 	in three-dimensional space.")
+
+# # plot the orbit in Cartesian coordinates
+# st.pyplot(fig0, bbox_inches = "tight", pad_inches = 0.5)
+
+# st.markdown("This next plot shows the relationship between the **orbital radius, radial velocity and height from the disk plane**. \
+# 	This shows how the radial velocity of the particle changes with its position inside the distribution.")
+
+# # plot the orbit with r vs. v_R vs. z
+# st.pyplot(fig1, bbox_inches = "tight", pad_inches = 0.5)
+
+# st.markdown("The last plot shows the relationship between the particle's **orbital radius, radial velocity and vertical velocity**. \
+# 	This plot shows how fast the particle is moving radially and vertically, depending on its distance from the center of the galaxy.")
+
+# # plot the orbit with r vs. v_r vs. v_z.
+# st.pyplot(fig2, bbox_inches = "tight", pad_inches = 0.5)
+
+# # show the animated orbit in 3D
+# st.markdown("And now we display the 3D animation of the orbit.")
+# st.components.v1.html(raw_html, height = 800)
 
