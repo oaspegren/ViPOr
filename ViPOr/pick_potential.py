@@ -47,8 +47,8 @@ def pick_potential(pot_fxn, index):
 		latex = r'''\Phi(R,z) = - \frac{\text{amp}}{\sqrt{R^2 + z^2 + b^2}}'''
 
 	if pot_fxn == "Two Power Spherical Potential":
-	 	param = "Power Law Exponent, " + r"$\alpha$"
-	 	param2 = "Power Law Exponent,"+ " and "+"r$\beta$"
+		param = "Power Law Exponent, " + r"$\alpha$"
+		param2 = "Power Law Exponent,"+ " and "+"r$\beta$"
 		min_value = 0.0
 		max_value = 6.0
 		step = 0.25
