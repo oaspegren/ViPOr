@@ -20,7 +20,7 @@ st.markdown("We now look at a general example of an axisymmetric potential. Thes
 
 st.markdown("The density of this distribution is given by the expression:")
 
-st.latex(r"\rho (R, z) = \text{amp} \text{exp}( -R/h_R - |z|/h_z)")
+st.latex(r"\rho (R, z) = \text{amp} \, \text{exp}( -R/h_R - |z|/h_z)")
 
 param_string = r"For this potential, you can modify the disk scale-length, $h_r$, and scale-height, $h_z$."
 
