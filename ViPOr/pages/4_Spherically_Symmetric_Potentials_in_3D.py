@@ -24,7 +24,7 @@ st.markdown("In this module, you can visualize various spherically symmetric pot
 st.markdown("Select a potential form below to get started.")
 
 # list of potential names and the drop down menu for the options the user has to pick their potential
-pot_names = ["Power Spherical Potential", "Two Power Spherical Potential", "Spherical Shell Potential", "Homogeneous Sphere Potential", "Plummer Potential"]
+pot_names = ["Power Spherical Potential", "Spherical Shell Potential", "Homogeneous Sphere Potential", "Plummer Potential"]
 pot_fxn = st.selectbox('Select a potential function:', pot_names)
 
 # print out the name of the potential the user has picked
@@ -62,7 +62,7 @@ height = st.slider("Set the initial height from the galactic plane:", min_value 
 # call plot_orbit_3D, which obtains the three plots and the animation for the given potential and initial conditions
 fig0, fig1, fig2, raw_html, density = plot_orbit_3D(pot_fxn_set, years, radius, height)
 
-st.markdown("Below is a plot of the potential for the Milky Way with the components selected, over each value of R and \
+st.markdown("Below is a plot of the potential over each value of R and \
 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \
 		increases as the object gets closer to the center.")
 

@@ -22,7 +22,7 @@ st.markdown("In this module, you can visualize various spherically symmetric pot
 
 st.markdown("Select a potential form below to get started.")
 
-pot_names = ["Power Spherical Potential", "Two Power Spherical Potential", "Spherical Shell Potential", "Homogeneous Sphere Potential", "Plummer Potential"]
+pot_names = ["Power Spherical Potential", "Spherical Shell Potential", "Homogeneous Sphere Potential", "Plummer Potential"]
 pot_fxn = st.selectbox('Select a potential function:', pot_names)
 
 pot_name_string = "You've selected the **"+pot_fxn+"**."
@@ -54,9 +54,9 @@ height = st.slider("Set the initial height from the galactic plane:", min_value 
 
 fig0, fig1, fig2, fig3, raw_html, density = plot_orbit_2D(pot_fxn_set, years, radius, height)
 
-st.markdown("Below is a plot of the potential for the Milky Way with the components selected, over each value of R and \
+st.markdown("Below is a plot of the potential over each value of R and \
 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \
-		increases as the object gets closer to the center.")
+		increases as we get closer to the center.")
 
 st.pyplot(density.get_figure())
 
@@ -66,7 +66,7 @@ st.markdown("The first is an **R vs. z** plot, which displays the path of the or
 
 st.pyplot(fig0, bbox_inches = "tight", pad_inches = 0.5)
 
-st.markdown("The second is an **Radius vs. radial velocity** plot, which displays the radial velocity of the particle at each radius — how fast the particle moves based on its distance \
+st.markdown("The second is an **radius vs. radial velocity** plot, which displays the radial velocity of the particle at each radius — how fast the particle moves based on its distance \
 	from the galactic center. We can track where the velocity is positive and where it is negative, which indicates the direction the particle orbits. Bound orbits will \
 	fluctuate between positive and negative, while unbound orbits will increase in radial velocity off into infinity.")
 
@@ -80,7 +80,7 @@ st.markdown("Lastly, we show **the projection of the orbit into the x-y plane**,
 
 st.pyplot(fig3, bbox_inches = "tight", pad_inches = 0.5)
 
-st.markdown("Finally, there is an animation that displays the movement of the particle in the meridional plane — once again, its vertical height from the galactic plane \
-	at each radius.")
+st.markdown("Finally, there is an animation that displays the movement of the particle perpendicular to the galactic plane — its vertical height from the galactic plane \
+	at each radius — as well as the motion of the particle in the galactic plane.")
 
-st.components.v1.html(raw_html, height = 800)
+st.components.v1.html(raw_html, height = 800, width = 500)
