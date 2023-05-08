@@ -35,9 +35,11 @@ st.markdown(pot_name_string)
 # maximum and step values for the parameter's slider
 parameters, equation, param1, density_string, latex, min_value, max_value, step = pick_potential(pot_fxn, pot_names.index(pot_fxn))
 
+# print out the equation of the mass density
 st.markdown(density_string)
 st.latex(latex)
 
+# print out the key parameter of interest
 param_string = "The parameter you can modify is: **"+parameters+"**."
 
 st.markdown(param_string)
