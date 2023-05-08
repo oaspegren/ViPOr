@@ -33,8 +33,8 @@ st.markdown(
 	Use the sliders to change this value and see what happens to the potential and orbit!
 	''')
 
-st.markdown("NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
-	allowed — please select new ones.")
+st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
+	allowed — please select new ones.**")
 
 # create sliders for the key parameter, length of time over which to integrate, radius and height above the galactic plane
 param = st.slider("Power-law Exponent, " + r"$\alpha$", min_value = 0.5, max_value = 5.0, step = 0.25)

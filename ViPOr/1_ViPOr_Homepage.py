@@ -23,7 +23,8 @@ st.markdown("- Visualizing the primary :green[**spherically symmetric**] potenti
 st.markdown("- Plotting the general :green[**axisymmetric**] and :green[**triaxial**] potentials in two and three dimensions")
 st.markdown("- Understanding the components of the :green[**Milky Way potential**]")
 
-st.markdown("Below is some general information about gravitational potentials and the resulting orbits within galaxies")
+st.markdown("Below is a general overview of how gravitational potentials work, what forms they come in and how we can derive the motion of \
+particles within a galaxy from them.")
 
 # overview of potentials
 st.markdown("### Basic Information About Potentials")
@@ -87,6 +88,6 @@ st.markdown("Triaxial systems are found in elliptical galaxies. In general, they
 st.markdown("Solving and characterizing these systems analytically requires multipole expansions and Bessel functions; therefore, these will be too complex \
 	to describe here with equations. However, we include a page that allows the user to manipulate and experiment with this galaxy geometry.")
 
-st.markdown("Finally, we can determine orbits from potentials by employing Newton's 3rd Law.")
+st.markdown("Ultimately, we can determine orbits from potentials by employing Newton's 3rd Law.")
 
 

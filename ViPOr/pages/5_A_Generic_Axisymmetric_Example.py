@@ -31,8 +31,8 @@ st.markdown(
 	Use the sliders to change this value and see what happens to the potential and orbit!
 	''')
 
-st.markdown("NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
-	allowed — please select new ones.")
+st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
+	allowed — please select new ones.**")
 
 scalelength = st.slider("Scale Length, " + r"$h_r$", min_value = 1, max_value = 100)
 scaleheight = st.slider("Scale Height, " + r"$h_z$", min_value = 1, max_value = 20)

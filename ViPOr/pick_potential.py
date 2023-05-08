@@ -52,7 +52,7 @@ def pick_potential(pot_fxn, index):
 	if pot_fxn == "Power Spherical Potential":
 		param1 = "Power Law Exponent, " + r"$\alpha$"
 		min_value = 0.0
-		max_value = 6.0
+		max_value = 3.0
 		step = 0.25
 
 	elif pot_fxn == "Homogeneous Sphere Potential":
