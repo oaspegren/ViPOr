@@ -7,8 +7,27 @@ import matplotlib.pyplot as plt
 import numpy
 import streamlit as st
 
-#@st.cache_data
 def pick_potential(pot_fxn, index):
+	'''
+	Outputs important information about the potential the user has chosen, which will be put into various streamlit functions.
+	This is just a way to try to make streamlit a little more efficient.
+
+	Inputs
+	--------
+	pot_fxn: the potential function, either set by default or chosen by the user
+	index: the index of the potential function in the list of potentials
+
+	Outputs: 
+	-------
+	parameters:
+	equation:
+	param1:
+	density_string:
+	latex:
+	min_value:
+	max_value:
+	step:
+	'''	
 
 	mod_params = [r"$\alpha$, the power law exponent", r"$\alpha$ and $\beta$, the power law exponents", r"$a$, the radius of the shell", r"$R$, the radius of the sphere", r"$b$, the scale parameter"]
 	eqns = [r'''\rho(r)= \frac{\text{amp}}{r^{3}} \left(\frac{r_1}{r}\right)^\alpha''', r'''\rho(r)= \frac{\text{amp}}{4\pi a^3} \frac{1}{r^{\alpha} (1 + r/a)^{\beta-\alpha}}''',\
@@ -59,8 +78,20 @@ def pick_potential(pot_fxn, index):
 
 	return parameters, equation, param1, density_string, latex, min_value, max_value, step
 
-#@st.cache_data
 def set_potential(pot_fxn, param):
+
+	'''
+	Creates and sets the potential based on the user's selections for the mass distribution and the key parameters
+
+	Inputs
+	------
+	pot_fxn: the potential selected by the user
+	param: the key parameter for the potential
+
+	Outputs
+	-------
+	pot_fxn_set: the initialized potential, with the key parameter set
+	'''
 
 	if pot_fxn == "Power Spherical Potential":
 		pot_fxn_set = PowerSphericalPotential(alpha = param)
@@ -75,5 +106,4 @@ def set_potential(pot_fxn, param):
 		pot_fxn_set = PlummerPotential(b = param)
 
 	return pot_fxn_set
-
 
