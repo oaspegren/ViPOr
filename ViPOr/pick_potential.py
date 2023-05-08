@@ -49,7 +49,7 @@ def pick_potential(pot_fxn, index):
 	if pot_fxn == "Two Power Spherical Potential":
 	 	param = "Power Law Exponent, " + r"$\alpha$"
 	 	param2 = "Power Law Exponent,"+ " and "+"r$\beta$"
-	 	min_value = 0.0
+		min_value = 0.0
 		max_value = 6.0
 		step = 0.25
 		param1 = [param, param2]
