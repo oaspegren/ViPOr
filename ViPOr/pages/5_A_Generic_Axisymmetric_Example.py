@@ -94,4 +94,3 @@ st.pyplot(fig2, bbox_inches = "tight", pad_inches = 0.5)
 
 st.markdown("And now we display the 3D animation of the orbit.")
 st.components.v1.html(raw_html, height = 800)
-
