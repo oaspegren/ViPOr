@@ -18,7 +18,7 @@ from pick_potential import pick_potential, set_potential
 st.markdown("## Experimenting with Spherically Symmetric Orbits in Three Dimensions")
 
 st.markdown("In this module, you can visualize various spherically symmetric potentials and their corresponding orbits in three \
-	dimension by selecting various potential forms, manipulating their key parameters and experimenting with different initial conditions. \
+	dimensions by selecting various potential forms, manipulating their key parameters and experimenting with different initial conditions. \
 	The page below will generate plots that show certain characteristics of their motion in a variety of coordinate systems.")
 
 st.markdown("Select a potential form below to get started.")
@@ -47,7 +47,7 @@ st.markdown(
 	Use the sliders to change this value and see what happens to the potential and orbit!
 	''')
 
-st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
+st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application stops running and throws an error, that's because the parameters are not \
 	allowed — please select new ones.**")
 
 param = st.slider(param1, min_value = min_value, max_value = max_value, step = step)
@@ -62,8 +62,6 @@ height = st.slider("Set the initial height from the galactic plane (kpc):", min_
 # call plot_orbit_3D, which obtains the three plots and the animation for the given potential and initial conditions
 
 fig0, fig1, fig2, raw_html, density = plot_orbit_3D(pot_fxn_set, years, radius, height)
-
-st.markdown("Please select other initial conditions!")
 
 st.markdown("Below is a plot of the potential over each value of R and \
 		z. The darker regions are areas where the magnitude of the potential is higher — so we can see that the potential \

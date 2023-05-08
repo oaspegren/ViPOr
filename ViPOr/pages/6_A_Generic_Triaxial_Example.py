@@ -15,7 +15,7 @@ from PlotPotentialandOrbit2D import plot_orbit_2D
 from PlotPotentialandOrbit3D import plot_orbit_3D
 
 st.markdown("## Looking at Orbits in a Power-law Triaxial Potential")
-st.markdown("We now look at an example of an triaxial potential. These are orbits created by elliptical galaxies.")
+st.markdown("We now look at an example of an triaxial potential. These are usually found in elliptical galaxies.")
 
 # give the general equation for the axisymmetric orbit
 st.markdown("The general equation for the density of a power-law triaxial distribution is:")
@@ -33,7 +33,7 @@ st.markdown(
 	Use the sliders to change this value and see what happens to the potential and orbit!
 	''')
 
-st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
+st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application stops running and throws an error, that's because the parameters are not \
 	allowed — please select new ones.**")
 
 # create sliders for the key parameter, length of time over which to integrate, radius and height above the galactic plane

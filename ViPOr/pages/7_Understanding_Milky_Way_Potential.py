@@ -27,7 +27,7 @@ r_s = numpy.linspace(0.01, 10, 1000)
 st.markdown("## Understanding the Milky Way Potential")
 st.markdown("Now that you've had a chance to look at general potentials and understand how particles behave in them, in this module, we will look at \
 	a specific case: the Milky Way.")
-st.markdown("The Milky Way can be simplified and broken down into four separate components: a **green:[bulge]:**, a **green:[disk]:**, a **:green[halo]:** and a **:green[black hole]:**.")
+st.markdown("The Milky Way can be simplified and broken down into four separate components: a **:green[bulge]**, a **:green[disk]**, a **:green[halo]** and a **:green[black hole]**.")
 st.markdown("Because potentials are scalar quantities, they have the property of linearity, and thus we can add them together \
 	to yield the potential of a more complex system. The Milky Way potential can then be written as:")
 

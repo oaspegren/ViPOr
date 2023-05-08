@@ -19,7 +19,7 @@ from pick_potential import pick_potential, set_potential
 st.markdown("## Experimenting with Spherically Symmetric Orbits in Two Dimensions")
 
 st.markdown("In this module, you can visualize various spherically symmetric potentials and their corresponding orbits in two \
-	dimension by selecting various potential forms, manipulating their key parameters and experimenting with different initial conditions. \
+	dimensions by selecting various potential forms, manipulating their key parameters and experimenting with different initial conditions. \
 	The page below will generate plots that show certain characteristics of their motion in a variety of coordinate systems.")
 
 st.markdown("Select a potential form below to get started.")
@@ -50,7 +50,7 @@ st.markdown(
 	Use the sliders to change this value and see what happens to the potential and orbit!
 	''')
 
-st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
+st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application stops running and throws an error, that's because the parameters are not \
 	allowed — please select new ones.**")
 
 # initialize slider for the parameter of interest

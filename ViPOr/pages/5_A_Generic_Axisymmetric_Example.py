@@ -15,7 +15,7 @@ from PlotPotentialandOrbit3D import plot_orbit_3D
 
 
 st.markdown("## Looking at Orbits in a Double Exponential Disk Potential")
-st.markdown("We now look at a general example of an axisymmetric potential. These are orbits created \
+st.markdown("We now look at a general example of an axisymmetric potential. These are created \
 	by disks, rings, and other distributions that are symmetric in the radial direction.")
 
 st.markdown("The density of this distribution is given by the expression:")
@@ -31,7 +31,7 @@ st.markdown(
 	Use the sliders to change this value and see what happens to the potential and orbit!
 	''')
 
-st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application throws an error, that's because the parameters are not \
+st.markdown("**NOTE: This may take a few moments to run and generate plots. If the application stops running and throws an error, that's because the parameters are not \
 	allowed — please select new ones.**")
 
 scalelength = st.slider("Scale Length, " + r"$h_r$", min_value = 1, max_value = 100)

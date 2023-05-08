@@ -38,7 +38,7 @@ st.markdown("The force on a particle within a given mass distribution is related
 st.latex(r'''
 	\bar{F}(\bar{x}) = -\bar{\nabla} \Phi
 	''')
-st.markdown(r"where $\Phi(\bar{x})$ is defined as")
+st.markdown(r"where $\Phi(\bar{x})$, the potential, is defined as")
 
 st.latex(r'''
 	\Phi(\bar{x}) = -G \int \frac{1}{|\bar{x}' - \bar{x}|} \rho (\bar{x'}) d^3 x'
@@ -53,7 +53,8 @@ st.latex(r'''
 st.markdown("In practice, it's often much easier to compute and visualize the graviational potential than it is the force; therefore, we can \
 	start by computing the mass distribution, determining the potential and then taking the gradient to yield the force on a particle.")
 
-st.markdown("Galaxy systems can be organized into three distinct categories, depending on their symmetries: :green[**spherically symmetric**], :green[**axisymmetric**] and :green[**triaxial**].")
+st.markdown("Galaxy mass distributions can be organized into three broad categories, depending on their symmetries: :green[**spherically symmetric**], :green[**axisymmetric**] and :green[**triaxial**].\
+	Within these categories, there are various forms of mass densities, such as homogeneous distributions or power-law distributions. All of these create different gravitational potentials.")
 
 # overview of spherically symmetric potentials
 st.markdown("#### Spherically Symmetric Systems")
